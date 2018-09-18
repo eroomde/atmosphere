@@ -1,6 +1,6 @@
 # Intro
 
-A very tiny utility to give access to atmospheric properties quickly at the command line.
+A very tiny utility to give atmospheric properties quickly at the command line.
 
 # Example Usage
 
