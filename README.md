@@ -1,8 +1,8 @@
-#Intro
+# Intro
 
 A very tiny utility to give access to atmospheric properties quickly at the command line.
 
-#Example Usage
+# Example Usage
 
 ```
 $ atmosphere -h 10000
@@ -12,10 +12,10 @@ At an altitude of 10000m:
 	Density:	0.414 Kg/m³
 ```
 
-#Installation
+# Installation
 
 `cargo install`
 
-#License
+# License
 
 GPLv3
