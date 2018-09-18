@@ -12,7 +12,7 @@ fn main() {
              .short("h")
              .required(true)
              .takes_value(true)
-             .help("height about sea level in meters"))
+             .help("height above sea level in meters"))
         .get_matches();
 
     let height = matches.value_of("height").unwrap();
