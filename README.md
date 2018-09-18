@@ -12,6 +12,10 @@ At an altitude of 10000m:
 	Density:	0.414 Kg/m³
 ```
 
+#Installation
+
+`cargo install`
+
 #License
 
 GPLv3
