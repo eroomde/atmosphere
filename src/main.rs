@@ -1,6 +1,7 @@
 extern crate atmosphere;
 extern crate clap;
 
+use std::process;
 use clap::{Arg, App};
 
 fn main() {
@@ -17,10 +18,21 @@ fn main() {
 
     let height = matches.value_of("height").unwrap();
 
-    let height: f64 = height.trim().parse().expect("Please make sure the height is a valid number!");
+    //let height: f64 = height.trim().parse().expect("Please make sure the height is a valid number!");
+
+    let height: f64 = match height.trim().parse() {
+        Ok(num) => num,
+        Err(_) => {
+            eprintln!("Please enter a valid number for the height");
+            process::exit(1);
+        }
+    };
 
     let props = atmosphere::get_properties(height);
 
-    println!("At an altitude of {}m:\n\tPressure:\t{:.3} kPa\n\tTemperature:\t{:.1} °C\n\tDensity:\t{:.3} Kg/m³",
+    println!("At an altitude of {}m:\n \
+             \tPressure:\t{:.3} kPa\n \
+             \tTemperature:\t{:.1} °C\n \
+             \tDensity:\t{:.3} Kg/m³",
              height, props.pressure, props.temp, atmosphere::get_density(&props)); 
 }
